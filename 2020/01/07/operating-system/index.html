@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="复习的时候把这个学期操作系统的重要内容列了一下。 只为看大纲和基础概念，会比较多、杂，哪天要用的时候可以及时查找，更详细的要直接看PPT。  操作系统概述操作系统的主要功能  处理机管理 存储器管理 设备管理 文件管理 用户接口  进程管理进程的相关基本概念程序的顺序执行：一个程序通常可以分为若干程序段，并且必须按照某种先后次序来执行。 程序顺序执行的特征：顺序性、封闭性（独占全部资源）、可再现">
+<meta name="keywords" content="操作系统,课程复习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="operating-system">
+<meta property="og:url" content="http://yoursite.com/2020/01/07/operating-system/index.html">
+<meta property="og:site_name" content="lchaoer">
+<meta property="og:description" content="复习的时候把这个学期操作系统的重要内容列了一下。 只为看大纲和基础概念，会比较多、杂，哪天要用的时候可以及时查找，更详细的要直接看PPT。  操作系统概述操作系统的主要功能  处理机管理 存储器管理 设备管理 文件管理 用户接口  进程管理进程的相关基本概念程序的顺序执行：一个程序通常可以分为若干程序段，并且必须按照某种先后次序来执行。 程序顺序执行的特征：顺序性、封闭性（独占全部资源）、可再现">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-09T06:38:00.048Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="operating-system">
+<meta name="twitter:description" content="复习的时候把这个学期操作系统的重要内容列了一下。 只为看大纲和基础概念，会比较多、杂，哪天要用的时候可以及时查找，更详细的要直接看PPT。  操作系统概述操作系统的主要功能  处理机管理 存储器管理 设备管理 文件管理 用户接口  进程管理进程的相关基本概念程序的顺序执行：一个程序通常可以分为若干程序段，并且必须按照某种先后次序来执行。 程序顺序执行的特征：顺序性、封闭性（独占全部资源）、可再现">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/01/07/operating-system/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>operating-system | lchaoer</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lchaoer</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/07/operating-system/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lchaoer">
+      <meta itemprop="description" content="Trying to find the inner peace and love life.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lchaoer">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">operating-system
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-01-07 15:07:57" itemprop="dateCreated datePublished" datetime="2020-01-07T15:07:57+08:00">2020-01-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-01-09 14:38:00" itemprop="dateModified" datetime="2020-01-09T14:38:00+08:00">2020-01-09</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/课程复习/" itemprop="url" rel="index"><span itemprop="name">课程复习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>复习的时候把这个学期操作系统的重要内容列了一下。</p>
+<p>只为看大纲和基础概念，会比较多、杂，哪天要用的时候可以及时查找，更详细的要直接看PPT。</p>
+</blockquote>
+<h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><p>操作系统的主要功能</p>
+<ol>
+<li>处理机管理</li>
+<li>存储器管理</li>
+<li>设备管理</li>
+<li>文件管理</li>
+<li>用户接口</li>
+</ol>
+<h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h1><h2 id="进程的相关基本概念"><a href="#进程的相关基本概念" class="headerlink" title="进程的相关基本概念"></a>进程的相关基本概念</h2><p>程序的<strong>顺序执行</strong>：一个程序通常可以分为若干程序段，并且必须按照某种先后次序来执行。</p>
+<p>程序顺序执行的特征：顺序性、封闭性（独占全部资源）、可再现性（初始条件相同则结果相同）。</p>
+<p>程序的<strong>并发执行</strong>：若干个程序在一个处理器上交替执行，宏观上表现为同时执行。目的是为了提高资源利用率。</p>
+<p>程序并发执行的特征：间断性、失去封闭性（共享资源受其他程序的影响）、不可再现性。</p>
+<h3 id="何为进程"><a href="#何为进程" class="headerlink" title="何为进程"></a>何为进程</h3><ul>
+<li>程序的一次执行。</li>
+<li>一个具有一定独立功能的程序在一个数据集合上的一次动态执行过程。</li>
+<li>是系统进行资源分配与调度的基本单位。（资源分配的最小单位）</li>
+<li>进程实体=程序段+数据段+PCB</li>
+</ul>
+<h3 id="进程的特征"><a href="#进程的特征" class="headerlink" title="进程的特征"></a>进程的特征</h3><ul>
+<li>动态性：进程是程序的一次执行过程，因创建而产生。</li>
+<li>并发性：多个程序存入内存，并发运行。程序能与其它程序并发以提高资源利用率。</li>
+<li>独立性：进程是能独立运行的基本单位。</li>
+<li>异步性：进程以各自独立、不可预知的速度向前推进。</li>
+</ul>
+<h3 id="进程与程序的区别"><a href="#进程与程序的区别" class="headerlink" title="进程与程序的区别"></a>进程与程序的区别</h3><ul>
+<li>进程是动态的，程序是静态的。</li>
+<li>进程是暂时的，程序是永久的。</li>
+<li>进程与程序的组成不同。</li>
+<li>进程与程序的对应关系 。通过多次执行，一个程序可对应多个进程；通过调用关系，一个进程可包括多个程序。</li>
+</ul>
+<h3 id="进程的基本状态"><a href="#进程的基本状态" class="headerlink" title="进程的基本状态"></a>进程的基本状态</h3><p>五种状态：创建、就绪、执行、阻塞、终止。</p>
+<ul>
+<li>创建：进程正在创建过程中，还不能运行。</li>
+<li>就绪：进程已获得除CPU外的所有资源，一旦获得CPU就可立即执行；多个就绪进程组成就绪队列。</li>
+<li>执行：进程获得所有资源，正在CPU上运行。</li>
+<li>阻塞：正在执行的进程由于某事件（I/O请求等）而暂时无法执行；多个阻塞进程组成阻塞队列。</li>
+<li>终止：进程已结束运行，回收除PCB外的其它资源。</li>
+</ul>
+<p>挂起：指在内存中的进程被暂时移到外存（如磁盘）的过程。目的是提高处理机效率，为运行进程提供足够内存等。</p>
+<p>若添加挂起操作，上述就绪状态可再分为<strong>静止就绪</strong>和<strong>活动就绪</strong>，阻塞状态可再分为<strong>静止阻塞</strong>和<strong>活动阻塞</strong>。</p>
+<p>当进程被挂起后，由活动就绪/阻塞变化为静止就绪/阻塞。</p>
+<p>进程控制块PCB：包含进程标识符、当前状态、优先级、程序段与数据段地址等。</p>
+<h2 id="进程控制"><a href="#进程控制" class="headerlink" title="进程控制"></a>进程控制</h2><p>进程控制一般由OS内核中的原语来实现。</p>
+<ul>
+<li>内核态：当进程执行系统调用而执行内核代码时，称进程处于内核态，此时处理器于特权级最高的内核代码中执行。</li>
+<li>用户态：当进程执行用户代码时，称其处于用户态，此时处理器于特权级最低的用户代码中运行。</li>
+</ul>
+<p>一个操作可以依次分成几个具体实施的动作，如果这几个动作的执行<strong>不会被分割或中断</strong>，且这些动作要么全部执行，要么一个都不执行，则称这个操作具有原子性。</p>
+<ul>
+<li>原语：某一段程序的执行具有原子性，则将该程序段称为原语 。</li>
+</ul>
+<p>进程控制原语主要有创建、撤销、阻塞和唤醒等。</p>
+<blockquote>
+<p>linux </p>
+<p>fork() 创建进程</p>
+<ul>
+<li>fork系统调用执行后，<strong>父子进程返回到用户空间中相同的地址</strong>，用户根据fork的<strong>返回值</strong>分别安排父子进程执行不同的代码。子进程继承父进程所拥有的资源。</li>
+</ul>
+<p>exec() 进程执行</p>
+<ul>
+<li>给新进程指定一个新的运行程序，该进程的代码段、数据段和堆栈段就被新程序所代替。</li>
+</ul>
+</blockquote>
+<p>进程的终止：终止原语，收回被终止进程所占用的所有资源，并撤销其PCB。</p>
+<p>进程的阻塞：正在执行的进程，当发现某事件时，由于无法继续执行，便通过调用阻塞原语block把自己阻塞。进程的阻塞是进程自身的一种主动行为。</p>
+<p>进程的唤醒：当被阻塞进程所期待的事件出现时，则由有关进程调用唤醒原语，将等待该事件的进程唤醒。</p>
+<h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><blockquote>
+<p>对多个相关进程在执行次序上进行协调，使并发执行的进程能按照一定的规则（次序）共享系统资源，并能很好地相互合作，从而使<strong>程序的执行具有可再现性</strong>。</p>
+</blockquote>
+<p>相互制约关系，直接、间接。</p>
+<ul>
+<li>临界资源：某段时间内只能允许一个进程使用的资源。</li>
+<li>临界区：进程中访问临界资源的代码段。</li>
+</ul>
+<p><strong>进程同步</strong>：为完成共同的任务而相互合作，且等待对方消息的协调关系，称为进程同步。</p>
+<p><strong>进程互斥</strong>：进程因共享资源而导致必须以一个不许交叉执行的单位执行，即不允许两个以上共享该资源的并发进程进入临界区。</p>
+<p>进程同步方法：</p>
+<ol>
+<li>硬件方法。（中断、指令）</li>
+<li>软件方法。（信号量）</li>
+</ol>
+<p>信号量机制：P、V操作。</p>
+<p>整型信号量（while循环）、记录型信号量（阻塞、就绪队列）。</p>
+<h2 id="进程通信"><a href="#进程通信" class="headerlink" title="进程通信"></a>进程通信</h2><ol>
+<li>信号量</li>
+<li>共享存储区</li>
+<li>消息缓冲队列</li>
+</ol>
+<p>低级通信：传送信息量小，效率低对用户不透明。（信号量）</p>
+<p>高级通信：用户直接利用OS提供的通信命令传输大量数据，通信控制细节由OS完成，对用户透明。（信箱）</p>
+<p>共享存储区：在内存中划出一块区域作为共享数据区，称为共享内存分区，通信进程双方将自己的虚拟地址空间映射到共享内存分区上。</p>
+<p>间接通信：使用信箱。</p>
+<p>直接通信：消息缓冲区。发送原语、接收原语。</p>
+<h2 id="进程-amp-线程"><a href="#进程-amp-线程" class="headerlink" title="进程&amp;线程"></a>进程&amp;线程</h2><p>进程：进程是一个可拥有资源的独立单位，一个可独立调度和分派的基本单位。</p>
+<ul>
+<li>进程是cpu资源分配的最小单位</li>
+</ul>
+<p>线程：进程内的一个执行单元，进程内的一个可独立调度的实体，相对独立的控制流序列。</p>
+<ul>
+<li>线程是cpu调度和执行的最小单位</li>
+<li>基本不拥有系统资源，只拥有为保证其运行而必不可少的资源如栈、寄存器等</li>
+<li>同一进程中的所有线程，共享该进程所拥有的全部资源</li>
+<li>多线程程序只要有一个线程崩溃，整个程序就崩溃了，但多进程程序中一个进程崩溃并不会对其它进程造成影响，因为进程有自己的独立地址空间。</li>
+</ul>
+<h1 id="处理机调度与死锁"><a href="#处理机调度与死锁" class="headerlink" title="处理机调度与死锁"></a>处理机调度与死锁</h1><h2 id="作业与调度"><a href="#作业与调度" class="headerlink" title="作业与调度"></a>作业与调度</h2><p>处理机调度的层次</p>
+<ul>
+<li>高级调度（作业调度）：根据调度算法选择外存上后备作业队列中的作业调入内存。即选择作业，建立进程，插入就绪队列。</li>
+<li>中级调度：将内存中暂时无法运行的进程挂起；把外存上具备运行条件的就绪进程调入内存。</li>
+<li>低级调度（进程调度）：按照一定的调度算法将CPU分配给就绪队列的进程。</li>
+</ul>
+<p>处理机调度的目标：提高资源利用率、公平性，保证平衡性。</p>
+<p>批处理系统（吞吐率、周转时间）、分时系统（响应时间、均衡）、实时系统（截止时间保证）。</p>
+<h2 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h2><ul>
+<li>先来先服务算法FCFS（First Come First Served）</li>
+<li>最短作业优先SJF（Shortest Job First）</li>
+<li>最高响应比优先HRRN（Highest Response Ratio First）</li>
+<li>优先级调度PSA（priority scheduling）</li>
+<li>时间片轮转RR（Round-Robin）</li>
+<li>多队列反馈调度算法MLFQ（Multilevel Feedback）：设置多个就绪队列。就绪队列分为N级（优先级由高到低），每个就绪队列分配给不同的时间片，队列优先权越高，每个进程的执行时间片就越小。当运行进程用完一个时间片时，进入下一级队列。</li>
+</ul>
+<p>$周转时间=完成时间-提交时间$</p>
+<p>$带权周转时间=周转时间/运行时间$</p>
+<p>进程调度方式：抢占式、非抢占式。</p>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><p> 多个进程因竞争共享资源而造成的一种僵局，若无外力作用，这些进程都将永远不能再向前推进。</p>
+<p>产生死锁的原因：</p>
+<ul>
+<li>竞争不可抢占资源引起死锁</li>
+<li>竞争可消耗资源引起死锁</li>
+<li>进程的推进顺序不当</li>
+</ul>
+<p><strong><em>死锁的必要条件：</em></strong></p>
+<ul>
+<li>互斥使用</li>
+<li>请求和保持</li>
+<li>不可抢占</li>
+<li>循环等待</li>
+</ul>
+<p><strong><em>处理死锁的方法</em></strong></p>
+<ul>
+<li>预防死锁：破坏死锁的必要条件中的一个或几个。</li>
+<li>避免死锁：在资源的动态分配过程中，用某种方法防止系统进入不安全状态。</li>
+<li>检测死锁</li>
+<li>解除死锁</li>
+</ul>
+<p><strong><em>银行家算法（避免死锁）</em></strong>：当一个进程申请使用资源时，银行家算法通过先试探分配给该进程资源；然后通过安全性算法判断分配后的系统是否处于安全状态；若不安全则试探分配作废，让该进程继续等待，安全则分配资源。</p>
+<h1 id="存储器管理"><a href="#存储器管理" class="headerlink" title="存储器管理"></a>存储器管理</h1><h2 id="程序的装入和链接"><a href="#程序的装入和链接" class="headerlink" title="程序的装入和链接"></a>程序的装入和链接</h2><p>编译：编译程序把源程序编译成若干个目标模块。</p>
+<p>链接：链接程序把所有目标模块和它们需要的库函数链接在一起，形成一个完整的可装入模块。</p>
+<p>装入：装入程序把可装入模块装入内存，当把CPU分配给它时就可以投入运行。</p>
+<p>重定位：把逻辑地址转换为内存中的物理地址。</p>
+<p>装入方式</p>
+<ol>
+<li><strong>静态重定位</strong>：是在目标程序<em>装入内存时</em>，由装入程序对目标程序中的地址进行转换。<ul>
+<li>优：简单易实现，不需要增加任何硬件设备，可以通过软件实现。</li>
+<li>缺：程序装入内存后不能移动；要求程序的存储空间连续；不利于程序共享。</li>
+</ul>
+</li>
+<li><strong>动态重定位</strong>：<em>运行时</em>完成相对地址到绝对地址的转换工作。<ul>
+<li>优：便于程序移动或换入换出；不必给程序分配连续的内存空间。</li>
+<li>缺：需要硬件支持；实现存储管理的软件算法比较复杂。</li>
+</ul>
+</li>
+</ol>
+<p>链接方式</p>
+<ol>
+<li>静态链接：程序运行 之前，先将各目标模块及所需的库函数链接成一个完整的装配模块。</li>
+<li>装入时动态链接：模块装入过程中同时完成所有目标模块的链接。</li>
+<li>运行时动态链接：先将一个目标模块装入内存且启动运行，在进程运行过程中如果需要调用其他模块，则再将所需模块装入内存，然后进程继续运行。</li>
+</ol>
+<h2 id="存储管理：连续（分区）分配"><a href="#存储管理：连续（分区）分配" class="headerlink" title="存储管理：连续（分区）分配"></a>存储管理：连续（分区）分配</h2><ol>
+<li>单一连续分区存储管理</li>
+<li>固定分区分配</li>
+<li>动态分区分配</li>
+</ol>
+<p>动态分区算法</p>
+<ul>
+<li>首次适应算法：空闲分区按地址递增次序链接。</li>
+<li>循环首次适应算法：每次扫描链表，不是从头开始，而是 从上次分配的分区后面开始扫描。 </li>
+<li>最佳适应算法：空闲分区按容量递增排列。</li>
+<li>最差适应算法：空闲分区按容量递减排列。</li>
+</ul>
+<p>数据结构</p>
+<ul>
+<li>空闲分区表</li>
+<li>已分配区表</li>
+</ul>
+<p>内存的回收时，有4种情况。</p>
+<p><strong><em>（动态）可重定位分区分配</em></strong>：当动态分区分配产生过多的<strong>碎片</strong>，若此时找不到足够大的空闲区且空闲区的容量可以满足作业要求时，进行<strong>拼接紧凑</strong>。该方法解决了碎片问题。</p>
+<p>对换技术：将内存中暂时还不能被运行的进程或者暂时用不到的程序和数据，换出到外存上，让出内存供在外存中等待的作业使用。（通常将外存分为文件区和对换区）</p>
+<h2 id="存储管理：离散（段页）分配"><a href="#存储管理：离散（段页）分配" class="headerlink" title="存储管理：离散（段页）分配"></a>存储管理：离散（段页）分配</h2><h3 id="分页式存储管理"><a href="#分页式存储管理" class="headerlink" title="分页式存储管理"></a>分页式存储管理</h3><p>程序的逻辑地址空间被划分成若干个页，从0开始为每个页编号；将内存空间分成与页面大小相同的若干个存储块，从0开始为每个块编号。</p>
+<p>一维逻辑地址＝页号×页长＋页内地址</p>
+<ul>
+<li>页表：用来映射页号与内存物理块之间的对应关系，通过页表找到每页在内存中的物理位置。</li>
+<li>地址变换机构（控制寄存器）</li>
+<li>块表：减少CPU的访存次数</li>
+<li>两级or多级页表</li>
+</ul>
+<p>内存物理块的分配和回收（请求表、内存分配表）</p>
+<p> 系统为进程分配内存空间步骤：</p>
+<ol>
+<li>查找请求表，根据请求表中该进程的页数查找内存分配表，是否有足够的空闲物理块；</li>
+<li>有则为该进程建立一个页表，同时在请求表中填写页表始址、长度状态等信息；</li>
+<li>根据具体的查找算法找出用于分配的空闲物理块并分配给该进程，同时填写页表；否则分配失败。</li>
+</ol>
+<p>优点：实现了离散存储，并可以避免外部碎片，为以后实现程序的“部分装入、部分对换”奠定了基础。</p>
+<p>缺点：</p>
+<ul>
+<li>要求有相应的硬件支持，如需要地址转换机构和快表等，增加了计算机的成本和系统的开销；</li>
+<li>分页存储管理虽然消除了外部碎片，但页内的内部碎片依然存在；</li>
+<li>分页破坏了程序的完整性，这给程序的共享、动态链接等技术的实现带来了困难。</li>
+</ul>
+<h3 id="分段式存储管理"><a href="#分段式存储管理" class="headerlink" title="分段式存储管理"></a>分段式存储管理</h3><p>程序有若干逻辑段组成，每个段有自己的名字和长度，程序的逻辑地址有段号，段内偏移量组成，每个段的逻辑地址从0开始编址。</p>
+<ul>
+<li>段表：段号+段长+基址。将二维逻辑地址转换为一维物理地址。</li>
+<li>控制寄存器</li>
+</ul>
+<p>优点：信息共享；动态增长；动态链接；便于实现存取访问控制。</p>
+<p>缺点：</p>
+<ul>
+<li>分段存储管理需要更多的硬件支持，增加了计算机的成本。</li>
+<li>分段存储管理在内存空闲区的管理方式上与分区存储管理相同，存在着外部碎片问题。</li>
+<li>缺段中断处理以及允许段的动态增长会给系统增加难度和开销。</li>
+</ul>
+<hr>
+<p>段页式存储管理：程序分段，段内分页。即将每个段进一步分成若干个页面，每个页面装入一个内存块，同一段的不同页面可以分到内存的不连续同块中。</p>
+<ul>
+<li>分页可以提高内存利用率</li>
+<li>分段可以很好的满足用户的需求</li>
+</ul>
+<p>分段和分页的区别：</p>
+<ul>
+<li>页是信息的物理单位，分页是系统管理需要，对用户不可见。</li>
+<li>页的大小固定且由系统决定。</li>
+<li>分页的用户程序地址空间是一维的。</li>
+</ul>
+<h1 id="虚拟存储器"><a href="#虚拟存储器" class="headerlink" title="虚拟存储器"></a>虚拟存储器</h1><p><strong>局部性原理</strong>：根据局部性原理，应用程序在运行之前不需要全部装入内存，仅须将当前要运行的少数页面或段先装入内存便可运行，其余部分暂留在盘上，需要时再调入内存。</p>
+<p><strong>虚拟存储器</strong>：是指具有请求调入功能和置换功能，能从逻辑上对内存容量加以扩充的一种存储器系统。</p>
+<ul>
+<li>虚拟存储器的容量与主存大小无直接关系，取决于计算机的地址结构和可用的物理内存和外存的容量之和。</li>
+<li>特征：多次调入；换进换出；逻辑上扩充内存。</li>
+</ul>
+<p>虚拟存储器的实现方法：</p>
+<ul>
+<li>请求分页式管理方式</li>
+<li>请求分段式管理方式</li>
+<li>请求段页式虚拟存储管理</li>
+</ul>
+<h2 id="请求分页式管理"><a href="#请求分页式管理" class="headerlink" title="请求分页式管理"></a>请求分页式管理</h2><p>硬件：</p>
+<ul>
+<li>请求页表</li>
+<li>缺页中断机构</li>
+<li>地址变换机构</li>
+</ul>
+<p>页面置换算法：</p>
+<ul>
+<li>最佳页面算法（OPT 算法）：理想化算法，用于评价其他算法。</li>
+<li>先进先出页面淘汰算法（FIFO）</li>
+<li>最近最久未使用页面淘汰算法（LRU）</li>
+<li>最少使用置换算法（LFU）</li>
+<li>Clock置换算法</li>
+</ul>
+<p>算法分配策略：固定分配局部置换。</p>
+<p>抖动：是淘汰算法不好而产生的一种现象。刚淘汰的页面又要被访问，又将其调入，再淘汰、再调入。浪费大量 CPU 的时间。一个进程在运行中把大部分时间都花费在页面置换上。</p>
+<p>产生抖动的原因：进程数量多，每个进程分配的物理块少。</p>
+<p>工作集：在某段时间间隔$△$内，进程实际所要访问页面的集合。</p>
+<h1 id="输入输出系统"><a href="#输入输出系统" class="headerlink" title="输入输出系统"></a>输入输出系统</h1><h2 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h2><p>磁盘容量=柱面数×磁头数×扇区数*扇区大小</p>
+<p>磁盘调度算法</p>
+<ul>
+<li>先来先服务FCFS</li>
+<li>最短寻道时间优先SSTF</li>
+<li>扫描算法（电梯调度算法）SCAN</li>
+<li>循环扫描算法CSCAN</li>
+</ul>
+<h2 id="设备"><a href="#设备" class="headerlink" title="设备"></a>设备</h2><blockquote>
+<p>linux抽象了对硬件的处理，所有硬件设备都能当做普通文件看待</p>
+<ul>
+<li>系统调用：是操作系统内核和应用程序之间的接口。（由用户态转换到核心态，转向OS中相应过程）</li>
+<li>设备驱动程序：是操作系统内核和机器硬件之间的接口。</li>
+</ul>
+</blockquote>
+<p>设备管理：指对计算机系统中除CPU和内存外的所有其他设备的管理。</p>
+<p>设备管理的功能：</p>
+<ul>
+<li>隐藏物理设备的细节：例如对磁盘的读写，用户无需考虑盘面号、磁道号和扇区号</li>
+<li>与设备的无关性：用户使用抽象的逻辑设备名来使用设备</li>
+<li>提高处理机和 I/O</li>
+<li>对 I/O 设备进行控制</li>
+<li>确保对设备的正确共享</li>
+<li>错误处理</li>
+</ul>
+<p>设备控制器：是CPU与IO设备之间的接口，接收从CPU发来的命令，并控制IO设备工作，它是一个可编址设备。</p>
+<p>编址方式：内存映像、寄存器独立编址。</p>
+<p>中断（CPU对I/O设备发来中断信号的响应，CPU外部）和陷入（CPU内部事件引起中断，CPU内部）。</p>
+<p>中断向量：中断服务程序的入口地址。</p>
+<p>中断过程：中断请求、阻塞进程、保护现场、执行中断程序、恢复现场&amp;退出中断、返回进程。</p>
+<p>设备驱动程序：接收上层软件发来的I/O要求，与硬件直接相关，具体实现系统对设备发出的操作指令，驱动IO设备工作的驱动程序。</p>
+<p>对I/O设备的控制方式：程序控制方式；中断方式；DMA方式。</p>
+<hr>
+<p>设备的分类</p>
+<ul>
+<li>独占设备</li>
+<li>共享设备</li>
+</ul>
+<p>设备的分配：系统设备表（SDT），设备控制表（DCT），控制器控制表（COCT），通道控制表（CHCT）。</p>
+<p>设备分配的实施步骤</p>
+<ol>
+<li>分配设备：根据请求的IO设备名查找SDT表，然后查DCT。</li>
+<li>分配设备控制器：查找DCT，找出与该设备连接的COCT，查看状态。</li>
+<li>分配通道：查看该控制器连接的通道是否繁忙。</li>
+</ol>
+<p>设备回收：修改表，处理阻塞队列。</p>
+<p><strong><em>spooling假脱机系统</em></strong></p>
+<p>通过假脱机技术，将一台物理IO设备虚拟为多台逻辑IO，允许多个用户共享一台物理IO设备。</p>
+<ul>
+<li>输入井、输出井：在磁盘上开辟两个存储空间；输入井用于暂存I/O设备输入的数据；输出井用于暂存用户程序的输出数据，以文件形式管理。</li>
+<li>输入缓冲区、输出缓冲区：内存中的两个缓冲区，用于缓和CPU磁盘之间速度不匹配矛盾。</li>
+<li>井管理程序</li>
+</ul>
+<p>输入：将用户要求的数据从<strong>输入设备</strong>传送到<strong>输入缓冲区</strong>，再存放到<strong>输入井</strong>，当CPU需要输入数据时，从输入井读入内存。</p>
+<p>输出：将用户要求输出的数据，先从内存送到<strong>输出井</strong>，待输出设备空闲时，再将输出井中的数据传送到<strong>输出缓冲区</strong>，然后送到<strong>输出设备上</strong>。</p>
+<p>特点：提高了I/O速度；将独占设备改造为共享设备；实现了虚拟设备功能。</p>
+<p>缓冲区：单缓冲；双缓冲；循环缓冲；缓冲池。</p>
+<h1 id="文件管理-amp-磁盘存储器管理"><a href="#文件管理-amp-磁盘存储器管理" class="headerlink" title="文件管理&amp;磁盘存储器管理"></a>文件管理&amp;磁盘存储器管理</h1><h2 id="磁盘存储空间的管理"><a href="#磁盘存储空间的管理" class="headerlink" title="磁盘存储空间的管理"></a>磁盘存储空间的管理</h2><p>磁盘是计算机系统中最重要的存储设备，用于存放系统和用户的文件。磁盘包括一个或多个物理盘片。</p>
+<ul>
+<li>磁盘由三部分组成：柱面（Cylinder）、磁头（Head）、扇区（Sector）。</li>
+<li>磁盘块（物理块）是存储空间分配和回收的基本单位。簇由一个或多个磁盘块组成。</li>
+</ul>
+<p>对磁盘存储空间的管理有4种方法</p>
+<ol>
+<li>空闲表法：属于连续分配方式，用一张空闲表记录空闲盘块起始编号和长度，与内存的动态分配方式类似。</li>
+<li>空闲链表法：空闲盘块链 &amp; 空闲盘区链。</li>
+<li>位示图法：用二进制的一位bit表示磁盘中一个盘块的使用情况。</li>
+<li>成组链接法</li>
+</ol>
+<h2 id="文件的结构"><a href="#文件的结构" class="headerlink" title="文件的结构"></a>文件的结构</h2><p>文件的结构分为逻辑结构和物理结构。</p>
+<p>从文件的物理结构（存储结构）上来说，有3种存储形式</p>
+<ol>
+<li>连续组织方式：在文件目录中存储起始地址和块数。</li>
+<li>链接组织方式（隐式即链表，显式即FAT表）：对FAT表来说，每个物理块在FAT表中都有一项，FCB指向第一个盘块在FAT表中的位置。FAT12表示表项有12位，可存放$2^{12}$个物理块。</li>
+<li>索引组织方式：单级索引，亦可将一个索引表放在另一个索引表中，进行多级索引。</li>
+</ol>
+<p>从文件的逻辑结构上来说，可按是否结构分类</p>
+<ol>
+<li>无结构文件（流式文件）：由字符序列组成的文件，其内部不再划分结构，字符是该文件的基本信息单位。在linux中，所有文件都被看作流式文件。</li>
+<li>有结构的记录式文件：用户以记录为单位来组织信息，文件是记录的集合。其中有结构文件又能分为三类，顺序文件、索引文件、索引顺序文件。</li>
+</ol>
+<h2 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h2><p>文件控制块FCB：OS为管理文件所设置的数据结构，存放为管理文件所需的信息（文件属性），亦称文件目录项。</p>
+<ul>
+<li><strong>文件目录</strong>：把所有的FCB组织在一起，就构成了文件目录，即文件控制块的有序集合。</li>
+<li><strong>目录文件</strong>：为了实现对文件目录的管理，通常将文件目录以文件的形式在外存，这个文件就叫目录文件。</li>
+</ul>
+<p>将所有的文件控制信息都放在目录项中，存在一个问题：由于一个文件目录项占用磁盘空间多，导致每个物理盘块放不了几个目录项，为了在目录中找到一个文件的目录项，需要读入多个物理块进行查找。</p>
+<p>解决方法：将FCB分成两部分，文件名和索引结点编号。</p>
+<ul>
+<li>在linux系统中，将文件控制信息分成两个部分，一部分只是保存文件名和其内部标识号；另一部分信息保存在inode结点中。</li>
+</ul>
+<p>文件目录种类</p>
+<ol>
+<li>单级文件目录（单用户）。整个文件系统中只建立一张目录表，每个文件占一个目录项。</li>
+<li>二级文件目录（多用户）。第一级主文件目录MFD，第二级用户子目录UFD。</li>
+<li>树形目录。根据文件名对目录进行查询，找出该文件的 FCB 或索引结点。</li>
+</ol>
+<p>文件的操作：为了提高系统工作效率，系统要求在文件操作前打开文件，以将 文件控制信息（FCB）调入内存，后续对文件访问，直接访问内存中相关信息即可。即维护一个“用户打开文件表”。</p>
+<h2 id="文件的共享与保护"><a href="#文件的共享与保护" class="headerlink" title="文件的共享与保护"></a>文件的共享与保护</h2><p>文件共享是指系统允许多个用户（进程）共享同一个文件。</p>
+<ol>
+<li>按“路径名”访问共享文件</li>
+<li><strong>基于索引结点的共享方式（硬链接）</strong>：两个不同文件的目录表项指向同一个索引结点（inode）。</li>
+<li><strong>基于符号链接的共享方式（软链接）</strong>：新建链接文件file2，其只包含被链接文件file1的路径名，当访问file2时，OS根据文件的路径找到file1文件，对其进行操作。只有主文件才拥有指向其索引结点的指针，而共享该文件的其他用户只有该文件的路径名而无索引结点的指针。</li>
+</ol>
+<p>访问权限控制：RWE，每个状态分别用一位来表示。</p>
+<h1 id="操作系统接口"><a href="#操作系统接口" class="headerlink" title="操作系统接口"></a>操作系统接口</h1><p>为了限制不同程序的访问能力，防止一些程序访问其它程序的内存数据，CPU划分了<strong>用户态</strong>和<strong>内核态</strong>两个权限等级。</p>
+<ul>
+<li>用户态只能受限地访问内存，且不允许访问外围设备，没有占用CPU的能力，CPU资源可以被其它程序获取。</li>
+<li>内核态可以访问内存所有数据以及外围设备，也可以进行程序的切换。</li>
+</ul>
+<p>所有用户程序都运行在用户态，但有时需要进行一些内核态的操作，比如从硬盘或者键盘读数据，这时就需要进行系统调用，使用CPU切换到内核态，执行相应的服务，再切换为用户态并返回系统调用的结果。</p>
+<p><strong>系统调用</strong>：用户程序通过系统调用从用户态切换到核心态，从而可以访问相应的资源。是内核向用户进程提供服务的唯一方法。好处如下</p>
+<ul>
+<li>为用户空间提供一种硬件的抽象接口，使编程更加容易。</li>
+<li>有利于系统的安全。</li>
+<li>有利于每个进程度运行在虚拟系统中，接口统一有利于移植。</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/操作系统/" rel="tag"># 操作系统</a>
+          
+            <a href="/tags/课程复习/" rel="tag"># 课程复习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/31/2019-summary/" rel="next" title="2019-年终总结">
+                <i class="fa fa-chevron-left"></i> 2019-年终总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">lchaoer</p>
+              <p class="site-description motion-element" itemprop="description">Trying to find the inner peace and love life.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/lchaoer" title="GitHub &rarr; https://github.com/lchaoer" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:lchaoe.me97@gmail.com" title="E-Mail &rarr; mailto:lchaoe.me97@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统概述"><span class="nav-number">1.</span> <span class="nav-text">操作系统概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程管理"><span class="nav-number">2.</span> <span class="nav-text">进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程的相关基本概念"><span class="nav-number">2.1.</span> <span class="nav-text">进程的相关基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#何为进程"><span class="nav-number">2.1.1.</span> <span class="nav-text">何为进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程的特征"><span class="nav-number">2.1.2.</span> <span class="nav-text">进程的特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程与程序的区别"><span class="nav-number">2.1.3.</span> <span class="nav-text">进程与程序的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程的基本状态"><span class="nav-number">2.1.4.</span> <span class="nav-text">进程的基本状态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程控制"><span class="nav-number">2.2.</span> <span class="nav-text">进程控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程同步"><span class="nav-number">2.3.</span> <span class="nav-text">进程同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程通信"><span class="nav-number">2.4.</span> <span class="nav-text">进程通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程-amp-线程"><span class="nav-number">2.5.</span> <span class="nav-text">进程&amp;线程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#处理机调度与死锁"><span class="nav-number">3.</span> <span class="nav-text">处理机调度与死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作业与调度"><span class="nav-number">3.1.</span> <span class="nav-text">作业与调度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调度算法"><span class="nav-number">3.2.</span> <span class="nav-text">调度算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁"><span class="nav-number">3.3.</span> <span class="nav-text">死锁</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存储器管理"><span class="nav-number">4.</span> <span class="nav-text">存储器管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序的装入和链接"><span class="nav-number">4.1.</span> <span class="nav-text">程序的装入和链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储管理：连续（分区）分配"><span class="nav-number">4.2.</span> <span class="nav-text">存储管理：连续（分区）分配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储管理：离散（段页）分配"><span class="nav-number">4.3.</span> <span class="nav-text">存储管理：离散（段页）分配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分页式存储管理"><span class="nav-number">4.3.1.</span> <span class="nav-text">分页式存储管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分段式存储管理"><span class="nav-number">4.3.2.</span> <span class="nav-text">分段式存储管理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#虚拟存储器"><span class="nav-number">5.</span> <span class="nav-text">虚拟存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#请求分页式管理"><span class="nav-number">5.1.</span> <span class="nav-text">请求分页式管理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出系统"><span class="nav-number">6.</span> <span class="nav-text">输入输出系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘"><span class="nav-number">6.1.</span> <span class="nav-text">磁盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设备"><span class="nav-number">6.2.</span> <span class="nav-text">设备</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件管理-amp-磁盘存储器管理"><span class="nav-number">7.</span> <span class="nav-text">文件管理&amp;磁盘存储器管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘存储空间的管理"><span class="nav-number">7.1.</span> <span class="nav-text">磁盘存储空间的管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件的结构"><span class="nav-number">7.2.</span> <span class="nav-text">文件的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件目录"><span class="nav-number">7.3.</span> <span class="nav-text">文件目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件的共享与保护"><span class="nav-number">7.4.</span> <span class="nav-text">文件的共享与保护</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统接口"><span class="nav-number">8.</span> <span class="nav-text">操作系统接口</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lchaoer</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.5.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

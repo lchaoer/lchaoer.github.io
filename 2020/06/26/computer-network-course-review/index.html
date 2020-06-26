@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="仅记录授课要点，课程复习用  概述计算机网络就是互连的、自治的计算机集合。  网络核心：路由器或分组转发设备。 网络边缘：主机、网络应用。  网络协议：是为进行网络中的数据交换而建立的规则、标准或约定。 接入网络：数字用户线路DSL、电缆网络。  带宽：单位时间内通过链路的数据量，通常以bps表示（比特/秒）。  数据交换类型：  分组交换：报文分拆出来的一系列相对较小的数据包，分组交换需要报文">
+<meta name="keywords" content="计算机网络,课程复习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络课程复习">
+<meta property="og:url" content="http://yoursite.com/2020/06/26/computer-network-course-review/index.html">
+<meta property="og:site_name" content="lchaoer">
+<meta property="og:description" content="仅记录授课要点，课程复习用  概述计算机网络就是互连的、自治的计算机集合。  网络核心：路由器或分组转发设备。 网络边缘：主机、网络应用。  网络协议：是为进行网络中的数据交换而建立的规则、标准或约定。 接入网络：数字用户线路DSL、电缆网络。  带宽：单位时间内通过链路的数据量，通常以bps表示（比特/秒）。  数据交换类型：  分组交换：报文分拆出来的一系列相对较小的数据包，分组交换需要报文">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-06-26T13:54:51.751Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机网络课程复习">
+<meta name="twitter:description" content="仅记录授课要点，课程复习用  概述计算机网络就是互连的、自治的计算机集合。  网络核心：路由器或分组转发设备。 网络边缘：主机、网络应用。  网络协议：是为进行网络中的数据交换而建立的规则、标准或约定。 接入网络：数字用户线路DSL、电缆网络。  带宽：单位时间内通过链路的数据量，通常以bps表示（比特/秒）。  数据交换类型：  分组交换：报文分拆出来的一系列相对较小的数据包，分组交换需要报文">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/06/26/computer-network-course-review/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>计算机网络课程复习 | lchaoer</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lchaoer</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/26/computer-network-course-review/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lchaoer">
+      <meta itemprop="description" content="Trying to find the inner peace and love life.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lchaoer">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机网络课程复习
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-06-26 21:07:57 / Modified: 21:54:51" itemprop="dateCreated datePublished" datetime="2020-06-26T21:07:57+08:00">2020-06-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/课程复习/" itemprop="url" rel="index"><span itemprop="name">课程复习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>仅记录授课要点，课程复习用</p>
+</blockquote>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>计算机网络就是互连的、自治的计算机集合。</p>
+<ul>
+<li>网络核心：路由器或分组转发设备。</li>
+<li>网络边缘：主机、网络应用。</li>
+</ul>
+<p>网络协议：是为进行网络中的数据交换而建立的规则、标准或约定。</p>
+<p>接入网络：数字用户线路DSL、电缆网络。</p>
+<ul>
+<li>带宽：单位时间内通过链路的数据量，通常以bps表示（比特/秒）。</li>
+</ul>
+<p>数据交换类型：</p>
+<ol>
+<li>分组交换：报文分拆出来的一系列相对较小的数据包，分组交换需要报文的拆分与重组。采用<strong>存储-转发</strong>的交换方式。<ul>
+<li>传输时延=$L/R$，L表示分组大小，R表示传输速率。</li>
+</ul>
+</li>
+<li>电路交换：端到端，通信前需建立电路。多路复用，频分FDM、时分TDM。</li>
+</ol>
+<ul>
+<li>分组交换允许更多用户同时使用网络。分组交换适用于突发网络，可能产生拥塞，分组延迟和丢失。</li>
+</ul>
+<p>ISP：因特网服务提供商。</p>
+<ul>
+<li>端系统通过<strong>接入ISP</strong>连接到Internet</li>
+</ul>
+<h2 id="时延、丢包、吞吐量。"><a href="#时延、丢包、吞吐量。" class="headerlink" title="时延、丢包、吞吐量。"></a>时延、丢包、吞吐量。</h2><p>时延：</p>
+<ul>
+<li>结点处理时延。</li>
+<li>排队时延。</li>
+<li><strong>传输时延</strong>。$L/R$，L表示分组长度，R表示链路带宽。</li>
+<li><strong>传播时延</strong>。$d/s$，d表示物理链路长度，s表示信号传播速度。</li>
+</ul>
+<p>丢包：</p>
+<ul>
+<li>丢包率=丢包数/已发送分组总数</li>
+</ul>
+<p>吞吐量：</p>
+<ul>
+<li>表示发送端与接收端之间的传送数据速率</li>
+<li>瓶颈链路：限制端到端吞吐量的链路。</li>
+</ul>
+<h2 id="协议层次和服务类型"><a href="#协议层次和服务类型" class="headerlink" title="协议层次和服务类型"></a>协议层次和服务类型</h2><p>计算机网络体系结构是<strong>分层结构</strong>。</p>
+<p>因特网的分成结构：</p>
+<ul>
+<li>应用层：支持网络应用</li>
+<li>传输层：进程间的数据传输</li>
+<li>网络层：数据报从源与目的之间的路由，数据分组与转发</li>
+<li>链路层：相邻网络元素（主机、交换机等）的数据传输</li>
+<li>物理层：比特流</li>
+</ul>
+<p>OSI参考模型：</p>
+<ul>
+<li>应用层、<strong>表示层</strong>、<strong>会话层</strong>、传输层、网络层、链路层、物理层</li>
+</ul>
+<h1 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h1><blockquote>
+<p>将应用之间需要通信的数据进行封装。</p>
+</blockquote>
+<p>常见的应用层协议：HTTP、FTP、DNS、SMTP、POP3、IMAP</p>
+<p>网络结构</p>
+<ol>
+<li>P2P</li>
+<li>client-server</li>
+</ol>
+<p>不同网络的进程通信，使用socket进行交换报文。ip地址+端口号。</p>
+<p>进程通信时，使用TCP/UDP协议进行数据的传输。</p>
+<h2 id="Web和HTTP"><a href="#Web和HTTP" class="headerlink" title="Web和HTTP"></a>Web和HTTP</h2><p>统一资源定位符URL：<a href="http://www.someschool.edu/someDept/pic.gif" target="_blank" rel="noopener">www.someschool.edu/someDept/pic.gif</a> </p>
+<p>（<strong>host name+path name</strong>，其中edu后为path，edu及以前为host）</p>
+<p>HTTP：超文本传输协议，用于web应用之间的数据传输，client-server模型。</p>
+<p>HTTP是一个无状态的协议，也就是说服务器不会保存关于客户端的历史请求信息。</p>
+<p>HTTP的通信基于TCP，每一次通信时都要使用TCP建立三次握手，第三次可携带信息；在结束通信时需要进行TCP的四次挥手。通信时可以建立持久性连接或非持久性连接。</p>
+<p><strong>RTT：Round-Trip Time，往返时延</strong>。数据从一段传送到另一端再返回的时延。</p>
+<p>对于非持久性连接的HTTP协议，<strong>响应时间=2RTT+file transmission time</strong>。</p>
+<ul>
+<li>请求响应的报文格式</li>
+<li>响应状态码</li>
+<li>请求方法</li>
+</ul>
+<p><strong>Cookie</strong></p>
+<ul>
+<li>cookie首部行，存在于HTTP请求和响应报文中</li>
+<li>浏览器存储用户的cookie信息</li>
+<li>服务器后台存储对应用户的cookie信息</li>
+</ul>
+<p><strong>Web caches</strong>：可以使客户端不用访问数据对应的原始服务器，缓解服务器的请求压力。</p>
+<p><strong>条件get</strong>：当web caches的数据长时间没有更新时，不返回数据。</p>
+<h2 id="电子邮件相关协议"><a href="#电子邮件相关协议" class="headerlink" title="电子邮件相关协议"></a>电子邮件相关协议</h2><p>发送电子邮件由三部分组成</p>
+<ol>
+<li>user agent</li>
+<li>mail servers</li>
+<li>protocol</li>
+</ol>
+<p>在发送电子邮件时，一般由用户传到自己对应的mail server，然后再由mail server传到目的mail server，最后别人查看邮件时，需要查看他们自己对应的mail server来获取邮件信息。</p>
+<p>发送邮件基于的传输协议：TCP。</p>
+<p><strong>SMTP</strong>：发送协议。持久性连接，发送信息必须为7位ASCII码。端口号25</p>
+<p><strong>POP3、IMAP</strong>：接受访问协议。区别如下</p>
+<ul>
+<li>POP3：允许电子邮件客户端下载服务器上的邮件，但是在客户端的操作（如移动邮件、标记已读等），不会反馈到服务器上。</li>
+<li>IMAP：提供webmail 与电子邮件客户端之间的双向通信，客户端的操作都会反馈到服务器上，对邮件进行的操作，服务器上的邮件也会做相应的动作。</li>
+</ul>
+<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>DNS：域名管理系统，实现对域名和ip地址的映射关系。</p>
+<p>由于DNS实现<strong>负载均衡</strong>，其一个域名可能对应多个ip地址，在查询DNS服务器时进行动态调整，返回对应ip地址。</p>
+<p>DNS由分布式数据库实现，从上到下分别对应<strong>根域名、顶级域名、权威域名、本地域名</strong>等</p>
+<p>查询方式：迭代查询、递归查询。</p>
+<p>若一个域名从未缓存过，DNS会在查询后进行缓存。</p>
+<p>DNS记录：<strong>resource records（RR）</strong>。</p>
+<ul>
+<li>RR format：<strong>（name, value, type, ttl）</strong></li>
+<li><strong>type=A</strong>：name=host name, value=ip address</li>
+<li><strong>type=NS</strong>：name=domain, value=hostname of authoritative name server for this domain</li>
+<li><strong>type=MX</strong>：value=name of mailserver associated with name</li>
+<li><strong>type=CNAME</strong>：name=name for some “canonical” (the real) name, value=canonical name</li>
+</ul>
+<h1 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h1><blockquote>
+<p>传输层需要辅助很多图片来理解，具体的就不记录了，这里放上一个他人记录的笔记，重点基本类似<a href="https://github.com/wolverinn/Waking-Up/blob/master/Computer%20Network.md" target="_blank" rel="noopener">https://github.com/wolverinn/Waking-Up/blob/master/Computer%20Network.md</a></p>
+</blockquote>
+<p>发送端多路复用、接收端多路分用</p>
+<p>GBK：累积确认。</p>
+<p>SR：独立确认。</p>
+<h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><blockquote>
+<p>将数据报从发送端传送到接收端。</p>
+</blockquote>
+<h2 id="网络层与路由器"><a href="#网络层与路由器" class="headerlink" title="网络层与路由器"></a>网络层与路由器</h2><p>网络层由<strong>数据平面</strong>和<strong>控制平面</strong>组成。数据平面负责控制对数据的转发，控制平面用于控制计算报文之间要如何进行传输，才能从发送端到接收端。</p>
+<p>两大功能</p>
+<ul>
+<li>转发：将分组从路由器的输入端口转移到合适的输出端口。</li>
+<li>路由选择：确定分组从源到目的经过的路径。</li>
+</ul>
+<p>控制平面的两种实现方式：</p>
+<ol>
+<li>一个远程控制器直接控制多个路由器，进行统一路由选择，然后将转发表下发到各个路由器。</li>
+<li>每个路由器独立地控制自己，维护自己的转发表，多个路由器之间能够进行相互交互。</li>
+</ol>
+<p><strong>网络服务模型</strong>：定义了分组在发送与接收端系统之间的端到端运输特性。具有确保分组到达目的地、有序分组交付等功能。</p>
+<p>路由器的组成：物理层、数据链路层、网络层。</p>
+<p>在选择路由器的端口时，满足<strong>最长前缀匹配</strong>原则。</p>
+<p>（将报文从输入端转发向合适的输出端）<strong>交换结构</strong>的类型：</p>
+<ul>
+<li>内存 memory</li>
+<li>总线 bus</li>
+<li>互联网络 interconnection network</li>
+</ul>
+<p>输入、输出端口排队（缓存、调度策略）</p>
+<h2 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h2><h3 id="ip报文"><a href="#ip报文" class="headerlink" title="ip报文"></a>ip报文</h3><p>报文格式。</p>
+<p>MTU：最大传输单元。</p>
+<p>每个网络链路有各自的MTU，当报文段过大时，会将报文进行分片（fragmentation），只有在最后的目的主机才会进行重组（reassembly）</p>
+<h3 id="ipv4"><a href="#ipv4" class="headerlink" title="ipv4"></a>ipv4</h3><p>ipv4地址有32位，用点分十进制表示。其地址的接口存在于每个主机和路由器，由ip地址将主机和路由器联系起来。</p>
+<p>ip地址的表示：</p>
+<ul>
+<li><p>高比特位：子网</p>
+</li>
+<li><p>低比特位：主机</p>
+</li>
+<li><p>223.1.3.0/24 ：表示前24位为子网，24为子网掩码。</p>
+</li>
+</ul>
+<p>CIDR：无类别域间路由。（子网部分无固定位数）</p>
+<p>DHCP：动态主机配置协议。（自动获得ip地址、默认网关、子网掩码等）</p>
+<p>ISP：互联网服务提供商。（提供一大组IP地址）</p>
+<p>路由聚合：转发往一个子网，而不是单个IP。</p>
+<p>最长前缀匹配原则。</p>
+<p>NAT：网络地址转换。在本地局域网内用局域网的ip地址，若要接入全球互联网，则与路由器通信时会分配一个全球的ip地址。</p>
+<h3 id="ipv6"><a href="#ipv6" class="headerlink" title="ipv6"></a>ipv6</h3><ul>
+<li>报文首部固定40个字节。</li>
+<li>在传输过程中不可对数据报进行分片。</li>
+</ul>
+<p>以上目的：加快数据报处理和转发的速度。</p>
+<p>报文格式。</p>
+<p>ipv4转ipv6</p>
+<ul>
+<li>隧道tunneling</li>
+<li>把ipv6封装到ipv4中</li>
+</ul>
+<h1 id="网络层控制平面"><a href="#网络层控制平面" class="headerlink" title="网络层控制平面"></a>网络层控制平面</h1><h2 id="路由算法"><a href="#路由算法" class="headerlink" title="路由算法"></a>路由算法</h2><ul>
+<li>确定去往目的网络的最佳路径：从源到目的的最小费用路径。</li>
+</ul>
+<p>链路的权值表示费用，c(x,x’)</p>
+<p>路由算法分类</p>
+<ul>
+<li>静态路由（手工配置、更新慢、优先级高）、动态路由（路由更新快）</li>
+<li>全局（所有路由器掌握完整的网络拓扑信息）、分散（路由器只掌握物理相邻的邻居及链路费用）</li>
+</ul>
+<h3 id="链路状态算法"><a href="#链路状态算法" class="headerlink" title="链路状态算法"></a>链路状态算法</h3><p>Dijkstra</p>
+<ul>
+<li>所有结点掌握网络拓扑和链路费用</li>
+<li><ul>
+<li>通过链路状态广播（泛洪）</li>
+<li>所有结点拥有相同信息</li>
+</ul>
+</li>
+<li>计算一个结点到达其他结点的最短路径（获得转发表）</li>
+<li>c(x,y)：结点x到结点y的链路费用；D(v)：从源到目的v的当前路径费用值；p(v)：从源到v的当前路径，v的前序结点；N’：已经找到最小费用路径的结点集合。</li>
+</ul>
+<p>存在震荡（oscillation）的可能</p>
+<h3 id="距离向量算法"><a href="#距离向量算法" class="headerlink" title="距离向量算法"></a>距离向量算法</h3><p>Bellman-ford</p>
+<ul>
+<li>dx(y)：从x到y最短路径的费用。dx(y)=min{c(x,v), dv(y)}，v为x的邻居</li>
+<li>Dx(y)：从x到y的最小费用估计。Dx(y)=[Dx(y): y$\in$N]，N为所有点的集合</li>
+<li><strong>每个结点维护所有邻居的距离向量：Dv=[Dv(y): y$\in$N]</strong></li>
+<li>结点获得最短路径的下一跳，该信息用于转发表中</li>
+<li><strong>核心思想</strong>：每个结点不定时地将自身的Dv估计发给其邻居。当x接到邻居的Dv时，依据BF更新其自身的距离向量估计。</li>
+<li>异步迭代（局部迭代）、分布式（仅当Dv变化才通知邻居）</li>
+</ul>
+<p>好消息传播块，坏消息传播慢。</p>
+<p>若某一结点链路发送变化，相邻结点感知速度慢，可能产生<strong>无穷计数</strong>问题。</p>
+<p>解决办法：毒性逆转。</p>
+<ul>
+<li>毒性逆转：若一个结点到达某目的的最小费用是通过某个邻居，则告知该邻居节点到达目的的距离为无穷大。</li>
+</ul>
+<h2 id="层次路由"><a href="#层次路由" class="headerlink" title="层次路由"></a>层次路由</h2><p>将任意规模的网络抽象为一个图计算路由，过于理想化。考虑到网络规模、管理自治两个因素，可以分层。</p>
+<ul>
+<li><p>聚合路由器为一个区域：<strong>自治系统AS</strong>（autonomous systems）</p>
+</li>
+<li><p>同一AS内的路由器运行相同的路由协议（算法）</p>
+<ul>
+<li><strong>自治系统内部协议</strong>。“intra-AS” routing protocol</li>
+</ul>
+</li>
+<li><p><strong>网关路由器</strong>（gateway router）</p>
+<ul>
+<li>位于AS边缘，通过链路连接其他AS的网关路由器。</li>
+</ul>
+</li>
+<li><p><strong>转发表</strong>由AS内部路由算法与AS间路由算法共同配置。</p>
+<ul>
+<li>若能通过多个AS到达目的，则根据<strong>热土豆路由</strong>原则，即将分组发送给最近（费用最低）的网关路由器。</li>
+</ul>
+</li>
+</ul>
+<h2 id="OSPF协议（自治系统内）"><a href="#OSPF协议（自治系统内）" class="headerlink" title="OSPF协议（自治系统内）"></a>OSPF协议（自治系统内）</h2><p>OSPF：open shortest path first，开放最短路径优先协议。</p>
+<p>OSPF封装在IP报文中，RIP封装在UDP报文中。</p>
+<ul>
+<li><strong>自治系统内部协议</strong></li>
+<li>使用链路状态路由算法</li>
+<li>OSPF通告中每个入口对应一个邻居</li>
+<li>OSPF通告在整个AS范围泛洪</li>
+<li><ul>
+<li>OSPF报文直接封装在IP数据报中</li>
+</ul>
+</li>
+</ul>
+<p>优点：</p>
+<ul>
+<li>安全：所有OSPF报文可被认证</li>
+<li>允许使用多条相同费用的路径（RIP只能选择一条）</li>
+<li>对于每条链路，可以针对不同的TOS设置多个不同的费用度量（TOS为首部中的服务类型）</li>
+<li>OSPF支持对大规模AS再次分层</li>
+</ul>
+<p>分层的OSPF</p>
+<ul>
+<li>两级分层：主干区（backbone）、局部区（local area）</li>
+<li>链路状态通告只限于区域内</li>
+<li>每个路由器掌握所在区内的详细拓扑</li>
+<li>只知道去往其他区网络的“方向”（不知详细拓扑）</li>
+<li>区域边界路由器（area border router），既是主干区路由器，也是局部区路由器</li>
+<li>AS边界路由器（boundary router），负责连接其他自治系统</li>
+</ul>
+<h2 id="BGP协议（自治系统间）"><a href="#BGP协议（自治系统间）" class="headerlink" title="BGP协议（自治系统间）"></a>BGP协议（自治系统间）</h2><p>BGP：border gateway protocol，边界网关协议</p>
+<ul>
+<li><strong>自治系统间协议</strong>（标准区域间路由协议）</li>
+<li><strong>eBGP</strong>：从邻居AS获取子网可达性信息</li>
+<li><strong>iBGP</strong>：向所有AS内部路由器传播子网可达性信息</li>
+<li>基于可达性信息与策略，确定到达其他网络的路径</li>
+</ul>
+<p>BGP会话（session）：两个BGP路由器交换BGP报文。</p>
+<ul>
+<li>通告去往不同目的前缀（prefix）的路径</li>
+<li>报文交换基于半永久的TCP连接</li>
+<li>前缀+属性（AS路径，下一跳）=路由</li>
+</ul>
+<p>BGP报文：</p>
+<ul>
+<li>OPEN：与另一个BGP建立TCP连接，并认证对方</li>
+<li>UPDATE：通告新路径（或撤销原路径）</li>
+<li>KEEPALIVE：在无UPDATE时，保活连接；也用于对OPEN请求的确认</li>
+<li>NOTIFICATION：报告先前报文的差错，也用于关闭连接</li>
+</ul>
+<p>BGP路由选择：</p>
+<ul>
+<li>基于策略（policy）路由（本地偏好值、最短AS-PATH、热土豆路由等）</li>
+</ul>
+<p>BGP路由选择策略：</p>
+<ul>
+<li><p>不同自治系统之间的通告存在策略。</p>
+</li>
+<li><p>提供商网络、客户网络、桩网络（只与一个AS连接）、双宿网络（与两个AS连接）</p>
+</li>
+<li><p>提供商只为客户路由</p>
+</li>
+</ul>
+<p>为什么采用不同的AS内与AS间路由协议？</p>
+<ol>
+<li>AS间：期望能够管理控制流量如何被路由，谁路由经过其网络等</li>
+<li>AS内：单一管理，无需策略决策</li>
+<li>层次化节省路由表大小，减少路由流量更新，适应大规模网络</li>
+</ol>
+<h2 id="ICMP协议"><a href="#ICMP协议" class="headerlink" title="ICMP协议"></a>ICMP协议</h2><p>ICMP：互联网控制报文协议</p>
+<p>用于报告主机或路由器异常、差错。</p>
+<p> ICMP 报文封装到IP数据报中传输。</p>
+<h1 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h1><p>数据传输形式：帧（frame）</p>
+<p>帧首部中的“MAC”地址，用于标识帧的源和目的</p>
+<p>链路层在“适配器”中实现，即网卡</p>
+<h2 id="差错检测"><a href="#差错检测" class="headerlink" title="差错检测"></a>差错检测</h2><ul>
+<li>奇偶校验（1比特位、二维）</li>
+<li>检验和</li>
+<li>循环冗余校验码（CRC）</li>
+<li><ul>
+<li>检测能力强</li>
+<li>设数据比特，D（二进制表示）</li>
+<li>设r+1位的生成比特模式，G</li>
+<li>目标：选择r位的CRC比特，R满足：</li>
+<li><ul>
+<li>&lt;D,R&gt;刚好可以被G整除（模2）</li>
+<li>检测：利用&lt;D,R&gt;除以G，<strong>余式全0则无措</strong>，否则有错</li>
+<li>可以检测所有突发长度小于r+1位的错</li>
+</ul>
+</li>
+<li>令 $D*2^r xor R=nG$</li>
+<li>所以，R的求法为:$R=(D*2^r)/G$</li>
+<li>除法为异或的形式</li>
+</ul>
+</li>
+</ul>
+<h2 id="多路访问控制协议"><a href="#多路访问控制协议" class="headerlink" title="多路访问控制协议"></a>多路访问控制协议</h2><p>multiple access control protocol（MAC）</p>
+<p>链路类型：</p>
+<ol>
+<li>点对点</li>
+<li>广播</li>
+</ol>
+<p>冲突：单一共享广播信道，两个或两个以上的结点同时传输</p>
+<p>MAC协议分类：</p>
+<ol>
+<li><p>信道划分。多路复用技术，如TDMA、FDMA</p>
+</li>
+<li><p>随机访问。信道不划分，允许冲突，采用冲突“恢复”机制，如ALOHA、CSMA、CSMA/CD</p>
+</li>
+<li><p>轮转。如令牌环网，polling</p>
+</li>
+</ol>
+<h3 id="信道划分"><a href="#信道划分" class="headerlink" title="信道划分"></a>信道划分</h3><p>TDMA: time division multiple access</p>
+<ul>
+<li>“周期性”接入信道，每个站点在每个周期，占用固定长度的时隙</li>
+</ul>
+<p>FDMA: frequency division multiple access</p>
+<ul>
+<li>信道频谱划分为若干频带，每个站点分配一个固定的频带</li>
+</ul>
+<h3 id="随机访问"><a href="#随机访问" class="headerlink" title="随机访问"></a>随机访问</h3><p>当结点要发送分组时，利用信道全部数据速率R发送分组。若两个或多个结点同时传输，则发生冲突，随机访问协议需要检测冲突，并从冲突中“恢复”。</p>
+<h4 id="时隙ALOHA"><a href="#时隙ALOHA" class="headerlink" title="时隙ALOHA"></a>时隙ALOHA</h4><p>假定：所有帧大小相同；时间被划分为等长的时隙；每个时隙可传输1个帧；结点只能在时隙开始时刻发送帧；结点间时钟同步；如果2个或2个以上结点在同一时隙发送帧，结点即检测到冲突。</p>
+<p>运行：当结点有新的帧时，在下一个时隙(slot)发送。如果无冲突：该结点可以在下一个时隙继续发送新的帧；如果冲突：该结点在下一个时隙以概率p重传该帧，直至成功。</p>
+<p>最大效率：37%</p>
+<ul>
+<li><p>非时隙(纯)Aloha：更加简单，无需同步，当有新的帧生成时，立即发送，但冲突可能性增大。</p>
+</li>
+<li><ul>
+<li>最大效率：18%</li>
+</ul>
+</li>
+</ul>
+<h4 id="CSMA"><a href="#CSMA" class="headerlink" title="CSMA"></a>CSMA</h4><p>载波监听多路访问协议CSMA (carrier sense multiple access)</p>
+<ul>
+<li>发送帧之前，监听信道(载波)：信道空闲，发送完整帧；信道忙，推迟发送。</li>
+<li>冲突可能仍然发生：信号传播延迟。</li>
+</ul>
+<p>为了解决信号传播延迟的问题，可以改进为CSMA/CD协议。</p>
+<ul>
+<li><p>边发送信号时边检测，不发送信号时不检测。</p>
+</li>
+<li><p>短时间内可以检测到冲突，冲突后传输中止，减少信道浪费。</p>
+</li>
+<li><p>有线局域网易于实现：测量信号强度，比较发射信号与接收信号。</p>
+</li>
+<li><p>无线局域网很难实现：接收信号强度淹没在本地发射信号强度下。</p>
+</li>
+<li><p>效率：$\frac{1}{1+\frac{5t_prop}{t_trans}}$，其中$t_prop$表示LAN中两个结点的最大传播延迟，$t_trans$表示最长帧传输延迟</p>
+<p>CSMA/CD的具体传输过程如下：</p>
+</li>
+</ul>
+<ol>
+<li>NIC（网卡）监听信道：如果监听到信道空闲，则开始发送帧；如果NIC监听到信道忙，则一直等待到信道空闲，然后发送帧。</li>
+<li>NIC发送完整个帧，而没有检测到其他结点的数据发送，则NIC确认帧发送成功！</li>
+<li>如果NIC检测到其他结点传输数据，则中止发送，并发送堵塞信号。</li>
+<li>中止发送后，NIC进入二进制指数退避：</li>
+<li><ul>
+<li>第m次连续冲突后：</li>
+<li><ul>
+<li>取n = Min(m, 10)</li>
+<li>从{$0,1,2,\dots,2^n-1$}中随机选择一个数为K</li>
+<li>等待K·512比特的传输延迟时间，再返回第1步</li>
+</ul>
+</li>
+<li>连续冲突次数越多，平均等待时间越长</li>
+</ul>
+</li>
+</ol>
+<h2 id="局域网"><a href="#局域网" class="headerlink" title="局域网"></a>局域网</h2><p>IP地址：32位。接口的网络层地址，用于标识网络层(第3层)分组，支持分组转发。</p>
+<p>MAC地址：48位。用于局域网内标识一个帧从哪个接口发出，到达哪个物理相连的其他接口，固化在网卡中。</p>
+<ul>
+<li><p>局域网中的每块网卡都有一个唯一的MAC 地址。</p>
+</li>
+<li><p>MAC地址由IEEE统一管理与分配，网卡生产商购买MAC地址空间(前24比特)。</p>
+</li>
+<li><p>类比：IP地址为邮政地址。MAC地址为身份证号。</p>
+</li>
+</ul>
+<h3 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h3><p>如何在已知目的接口的IP地址址前提下确定其MAC 地址？使用ARP表</p>
+<ul>
+<li>LAN中的每个IP结点(主机、路由器)维护一个ARP表。</li>
+<li>存储某些LAN结点的IP/MAC地址映射关系:&lt; IP地址; MAC地址; TTL&gt;</li>
+<li>TTL (Time To Live)：经过这个时间以后该映射关系会被遗弃(典型值为20min)</li>
+</ul>
+<p>同一局域网内的ARP协议运作：</p>
+<ol>
+<li><p>A想要给同一局域网内的B发送数据报。若B的MAC地址在A的ARP表中，直接取出表中IP对应的MAC地址进行转发；若B的MAC地址不在A的ARP 表中，进行第2步</p>
+</li>
+<li><p>A广播ARP查询分组，其中包含B的IP地址</p>
+</li>
+<li><ul>
+<li>目的MAC地址 = FF-FF-FF-FF-FF-FF</li>
+<li>LAN中所有结点都会接收ARP查询</li>
+</ul>
+</li>
+<li><p>B接收ARP查询分组，IP地址匹配成功，向A应答B的MAC 地址</p>
+</li>
+<li><ul>
+<li>利用单播帧向A发送应答</li>
+</ul>
+</li>
+<li><p>A在其ARP表中，缓存B的IP-MAC地址对，直至超时。</p>
+</li>
+</ol>
+<ul>
+<li>若传输时跨越了局域网，则A向路由器网关发送数据报，通过路由器来转发到B。到达路由器后，数据帧中MAC地址会改变。</li>
+</ul>
+<h3 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h3><p>ETHERNET：应用最广泛的有线LAN技术，造价低廉，满足网络速率需求。</p>
+<p>类型：</p>
+<ol>
+<li>总线型bus（所有结点在同一冲突域）</li>
+<li>星型star（中心交换机，每个结点一个单独冲突域）</li>
+</ol>
+<p>特点：无连接，不可靠</p>
+<ul>
+<li>以太网的MAC协议：采用二进制指数退避算法的CSMA/CD</li>
+</ul>
+<p>以太网帧的结构：</p>
+<ul>
+<li>前导码：用于发送端与接收端的时钟同步</li>
+<li>目的MAC地址、源MAC地址（若目的MAC地址为广播地址，FF-FF-FF-FF-FF-FF）</li>
+<li>类型(2B)：指示帧中封装的是哪种高层协议的分组，如IP</li>
+<li>数据(Data)(46-1500B)：指上层协议载荷，MTU=1500</li>
+<li><ul>
+<li>存在数据最小值，是考虑到CSMA/CD发送数据存在时延，若数据太小，则发送太快，检测不到是否冲突</li>
+</ul>
+</li>
+<li>CRC(4B)：循环冗余校验码</li>
+</ul>
+<p>以太网的标准不同，导致速率不同，介质不同（光纤，铜缆）</p>
+<h3 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h3><ul>
+<li>链路层设备，存储、转发以太网帧，选择性向一个或多个输出链路转发帧</li>
+<li>自学习，无需配置</li>
+<li>即插即用</li>
+<li>利用CSMA/CD访问链路，发送帧，每段链路一个独立的冲突域</li>
+</ul>
+<p>交换机如何知道从主机A到主机B？</p>
+<ul>
+<li>每个交换机有一个交换表（主机的MAC地址, 到达主机的接口, 时间戳）</li>
+<li>交换机通过自学习，获知到达主机的接口信息</li>
+<li><ul>
+<li>当收到帧时，交换机“学习”到发送帧的主机（通过帧的源MAC地址），位于收到该帧的接口所连接的LAN网段。将发送主机MAC地址/接口信息记录到交换表中。</li>
+</ul>
+</li>
+</ul>
+<p>当交换机收到帧：</p>
+<ol>
+<li>记录帧的源MAC地址与输入链路接口</li>
+<li>利用目的MAC地址检索交换表</li>
+<li>if 在交换表中检索到与目的MAC地址匹配的入口(entry)<br>then {<br>if 目的主机位于收到帧的网段<br>then 丢弃帧<br>else 将帧转发到该入口指向的接口<br>}<br>else 泛洪(flood)   //向除收到该帧的接口之外的所有接口转发</li>
+</ol>
+<h3 id="虚拟局域网VLAN"><a href="#虚拟局域网VLAN" class="headerlink" title="虚拟局域网VLAN"></a>虚拟局域网VLAN</h3><p>若局域网为单一广播域，所有第2层广播流量(ARP,DHCP, 未知目的MAC地址位置)必须穿越整个LAN。</p>
+<p>支持VLAN 划分的交换机，可以在一个物理LAN 架构上配置、定义多个VLAN。</p>
+<p>划分VLAN的作用：</p>
+<ul>
+<li>流量隔离</li>
+<li>动态成员：端口可以动态分配给不同VLAN</li>
+</ul>
+<p>中继端口(trunk port)：在跨越多个物理交换机定义的VLAN承载帧</p>
+<ul>
+<li>为多VLAN转发802.1帧容易产生歧义 (必须携带VLAN ID信息)</li>
+<li>802.1q协议为经过中继端口转发的帧增加/去除额外的首部域</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机网络/" rel="tag"># 计算机网络</a>
+          
+            <a href="/tags/课程复习/" rel="tag"># 课程复习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/22/google kickstart 2020 round A/" rel="next" title="google kickstart 2020 round A">
+                <i class="fa fa-chevron-left"></i> google kickstart 2020 round A
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">lchaoer</p>
+              <p class="site-description motion-element" itemprop="description">Trying to find the inner peace and love life.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/lchaoer" title="GitHub &rarr; https://github.com/lchaoer" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:lchaoe.me97@gmail.com" title="E-Mail &rarr; mailto:lchaoe.me97@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时延、丢包、吞吐量。"><span class="nav-number">1.1.</span> <span class="nav-text">时延、丢包、吞吐量。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协议层次和服务类型"><span class="nav-number">1.2.</span> <span class="nav-text">协议层次和服务类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用层"><span class="nav-number">2.</span> <span class="nav-text">应用层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Web和HTTP"><span class="nav-number">2.1.</span> <span class="nav-text">Web和HTTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电子邮件相关协议"><span class="nav-number">2.2.</span> <span class="nav-text">电子邮件相关协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS"><span class="nav-number">2.3.</span> <span class="nav-text">DNS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输层"><span class="nav-number">3.</span> <span class="nav-text">传输层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络层"><span class="nav-number">4.</span> <span class="nav-text">网络层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络层与路由器"><span class="nav-number">4.1.</span> <span class="nav-text">网络层与路由器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP协议"><span class="nav-number">4.2.</span> <span class="nav-text">IP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ip报文"><span class="nav-number">4.2.1.</span> <span class="nav-text">ip报文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ipv4"><span class="nav-number">4.2.2.</span> <span class="nav-text">ipv4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ipv6"><span class="nav-number">4.2.3.</span> <span class="nav-text">ipv6</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络层控制平面"><span class="nav-number">5.</span> <span class="nav-text">网络层控制平面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#路由算法"><span class="nav-number">5.1.</span> <span class="nav-text">路由算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#链路状态算法"><span class="nav-number">5.1.1.</span> <span class="nav-text">链路状态算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#距离向量算法"><span class="nav-number">5.1.2.</span> <span class="nav-text">距离向量算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次路由"><span class="nav-number">5.2.</span> <span class="nav-text">层次路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSPF协议（自治系统内）"><span class="nav-number">5.3.</span> <span class="nav-text">OSPF协议（自治系统内）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BGP协议（自治系统间）"><span class="nav-number">5.4.</span> <span class="nav-text">BGP协议（自治系统间）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ICMP协议"><span class="nav-number">5.5.</span> <span class="nav-text">ICMP协议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链路层"><span class="nav-number">6.</span> <span class="nav-text">链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#差错检测"><span class="nav-number">6.1.</span> <span class="nav-text">差错检测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多路访问控制协议"><span class="nav-number">6.2.</span> <span class="nav-text">多路访问控制协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信道划分"><span class="nav-number">6.2.1.</span> <span class="nav-text">信道划分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机访问"><span class="nav-number">6.2.2.</span> <span class="nav-text">随机访问</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#时隙ALOHA"><span class="nav-number">6.2.2.1.</span> <span class="nav-text">时隙ALOHA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSMA"><span class="nav-number">6.2.2.2.</span> <span class="nav-text">CSMA</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#局域网"><span class="nav-number">6.3.</span> <span class="nav-text">局域网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP协议"><span class="nav-number">6.3.1.</span> <span class="nav-text">ARP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以太网"><span class="nav-number">6.3.2.</span> <span class="nav-text">以太网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交换机"><span class="nav-number">6.3.3.</span> <span class="nav-text">交换机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟局域网VLAN"><span class="nav-number">6.3.4.</span> <span class="nav-text">虚拟局域网VLAN</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lchaoer</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.5.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
